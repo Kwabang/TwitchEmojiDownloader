@@ -15,6 +15,7 @@ if __name__ == "__main__":
         emote_name = (requests.get('https://api.twitchemotes.com/api/v4/channels/'+id).json()['emotes'][num]['code'])
         url = f"https://static-cdn.jtvnw.net/emoticons/v1/{emote_id}/3.0"
         image_name = f"{emote_name}.png"
+        print (f"Downloading {emote_name}")
         urllib.request.urlretrieve(url, path+image_name)
         num += 1
         if num == len(requests.get('https://api.twitchemotes.com/api/v4/channels/'+id).json()['emotes']):
