@@ -7,4 +7,4 @@ with open('config.json') as json_file:
 data = requests.get('https://api.twitchemotes.com/api/v4/channels/'+id).json()
 
 if __name__ == "__main__":
-    print (data)
+    print (data["emotes"])
