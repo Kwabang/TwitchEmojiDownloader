@@ -1,3 +1,4 @@
 {
-    "twitch_user_id" : "enter id"
+    "twitch_user_id" : "enter id",
+    "path" : "img/"
 }
