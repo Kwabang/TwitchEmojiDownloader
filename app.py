@@ -1,9 +1,13 @@
+import os
 import requests
 import json
 import urllib.request
 with open('config.json') as json_file:
     json_data = json.load(json_file)
     path = json_data["path"]
+
+if not(os.path.isdir(f"{path}")):
+    os.makedirs(os.path.join(f"{path}"))
 
 if __name__ == "__main__":
     streamer = input("다운로드를 원하는 스트리머의 ID를 입력해주세요. : ")
