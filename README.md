@@ -1,4 +1,4 @@
-# TwitchEmoteDownloader <a href="https://sourcerer.io/kwabang"><img src="https://img.shields.io/badge/Python-10%20commits-orange.svg" alt=""></a>
+# TwitchEmoteDownloader <img src="https://img.shields.io/static/v1?label=code&message=Python3&color=orange" alt="">
 
 Twitch Emotes Downloader는 트위치 스트리머의 이모티콘을 다운로드하는 프로그램입니다.<br>
 **이 프로그램은 Python 3.6+버전이 필요합니다.**
