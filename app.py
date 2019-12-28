@@ -7,7 +7,6 @@ with open('config.json') as json_file:
     path = json_data["path"]
 
 num = 0
-path = "img/"
 
 if __name__ == "__main__":
     while True:
