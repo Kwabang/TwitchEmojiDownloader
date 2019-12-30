@@ -13,7 +13,7 @@ Twitch Emotes Downloader는 트위치 스트리머의 이모티콘을 다운로�
 **releases** <code>https://github.com/Kwabang/TwitchEmoteDownloader/releases</code>
 
 ### 사용방법
-1. requests 모듈설치 <code>pip install requests</code?>
+1. requests 모듈설치 <code>pip install requests</code>
 2. app.py 실행 <code>python3 app.py</code>
 3. 다운로드할 스트리머의 ID입력 ex) <code>다운로드를 원하는 스트리머의 ID를 입력해주세요. : **twitchkr**</code>
 
