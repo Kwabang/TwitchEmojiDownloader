@@ -11,8 +11,7 @@ if not(os.path.isdir(f"{path}")):
 
 if __name__ == "__main__":
     streamer = input("다운로드를 원하는 스트리머의 ID를 입력해주세요. : ")
-    api = requests.get(f"https://api.twitch.tv/kraken/users?login={streamer}", params={'client_id':'prskmctggbzbblwr7tul4c4nuaraoc'}, headers={'Accept':'application/vnd.twitchtv.v5+json'}).json()
-    id = (api['users'][0]['_id'])
+    id = requests.get("https://api.twitch.tv/helix/users?login="+streamer, headers={'Client-ID': 'prskmctggbzbblwr7tul4c4nuaraoc'}).json()['data'][0]['id']
     num = 0
     while True:
         emote_id = (requests.get('https://api.twitchemotes.com/api/v4/channels/'+id).json()['emotes'][num]['id'])
