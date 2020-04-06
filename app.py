@@ -13,7 +13,6 @@ if __name__ == "__main__":
     if not(os.path.isdir(f"{path}{streamer}")):
             os.makedirs(os.path.join(f"{path}{streamer}"))
     emote_list = requests.get('https://api.twitchemotes.com/api/v4/channels/'+id).json()['emotes']
-    print(emote_list)
     while True:
         print (f"Downloading {emote_list[num]['code']}")
         urllib.request.urlretrieve(f"https://static-cdn.jtvnw.net/emoticons/v1/{emote_list[num]['id']}/3.0", f"{path}{streamer}/{emote_list[num]['code']}.png")
