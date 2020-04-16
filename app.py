@@ -22,6 +22,7 @@ async def download(streamer):
                 async with session.get(f"https://static-cdn.jtvnw.net/emoticons/v1/{emote_list[num]['id']}/3.0") as image_req:
                     if image_req.status == 200:
                         image_file = await aiofiles.open(f"{path}{streamer}/{emote_list[num]['code']}.png", mode='wb')
+                        print (f"Downloading {emote_list[num]['code']}")
                         await image_file.write(await image_req.read())
                         await image_file.close()
                         num+=1
