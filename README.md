@@ -7,6 +7,7 @@ Twitch Emoji Downloader는 트위치 스트리머의 이모티콘을 다운로�
 - [설치방법](#설치방법)
 - [사용방법](#사용방법)
 - [문의](#문의)
+- [책임](#책임)
 
 ### 설치방법 
 **Git** <code>git clone https://github.com/Kwabang/TwitchEmojiDownloader.git</code><br>
@@ -22,3 +23,6 @@ Twitch Emoji Downloader는 트위치 스트리머의 이모티콘을 다운로�
 
 ### 문의
 [이메일](mailto:kwabang2827@gmail.com) 또는 [디스코드](https://discordapp.com/invite/z8UBtjp)로 문의를 넣을 수 있습니다.
+
+### 책임
+프로그램을 이용하여 생기는 문제의 책임은 **사용자**에게 있습니다.
