@@ -7,12 +7,15 @@ with open('config.json') as json_file:
     json_data = json.load(json_file)
     path = json_data["path"]
     client_id = json_data["client_id"]
+    token = json_data["token"]
 
 async def download(streamer):
     if not(os.path.isdir(f"{path}{streamer}")):
         os.makedirs(os.path.join(f"{path}{streamer}"))
     async with aiohttp.ClientSession() as session:
-        async with session.get(f'https://api.twitch.tv/helix/users?login={streamer}',headers={'Client-ID': f'{client_id}'}) as twitch_id:
+        async with session.post(f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={token}&grant_type=client_credentials') as bearer:
+            bearer = (await bearer.json())['access_token']
+        async with session.get(f'https://api.twitch.tv/helix/users?login={streamer}',headers={'Client-ID': f'{client_id}','Authorization': f'Bearer {bearer}'}) as twitch_id:
             data = (await twitch_id.json())['data'][0]
         async with session.get(f"https://api.twitchemotes.com/api/v4/channels/{data['id']}") as emote_list:
             emote_list = (await emote_list.json())['emotes']
