@@ -22,7 +22,7 @@ Twitch Emoji Downloader는 트위치 스트리머의 이모티콘을 다운로�
 5. 다운로드할 스트리머의 ID입력 ex) <code>다운로드를 원하는 스트리머의 ID를 입력해주세요. : **twitchkr**</code>
 
 ### 문의
-[이메일](mailto:kwabang2827@gmail.com) 또는 [디스코드](https://kwabang.codes/join)로 문의를 넣을 수 있습니다.
+[이메일](mailto:kwabang2827@gmail.com) 또는 [디스코드](https://kwabang.net/join)로 문의를 넣을 수 있습니다.
 
 ### 책임
 프로그램을 이용하여 생기는 문제의 책임은 **사용자**에게 있습니다.
