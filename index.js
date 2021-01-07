@@ -1,6 +1,5 @@
 const fs = require('fs')
 const fetch = require('node-fetch')
-const config = require('./config/config.json')
 const readline = require('readline')
 const rl = readline.createInterface({
 	input: process.stdin,
@@ -19,6 +18,7 @@ const download = async (streamer) => {
 	let user_data
 	let emote_list
 	let fileStream
+	let config = JSON.parse(fs.readFileSync('./config/config.json'))
 	try {
 		res = await fetch(`https://id.twitch.tv/oauth2/token?client_id=${config.client_id}&client_secret=${config.token}&grant_type=client_credentials`, {
 			method: "POST"
@@ -59,6 +59,9 @@ const download = async (streamer) => {
 		console.log(`이모티콘 리스트 요청에 실패하였습니다.\n${error}`)
 		return
 	}
+	fs.stat(config.path, (err, stat) => {
+		if (err != null) fs.mkdirSync(config.path)
+	})
 	fs.stat(config.path + streamer, (err, stat) => {
 		if (err != null) fs.mkdirSync(config.path + streamer)
 	})
