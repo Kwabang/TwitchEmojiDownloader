@@ -1,7 +1,6 @@
-# TwitchEmojiDownloader <img src="https://img.shields.io/static/v1?label=code&message=Python3&color=orange" alt="">
+# TwitchEmojiDownloader <img src="https://img.shields.io/static/v1?label=code&message=Node.js&color=green" alt="">
 
 Twitch Emoji Downloader는 트위치 스트리머의 이모티콘을 다운로드하는 프로그램입니다.<br>
-**이 프로그램은 Python 3.6+버전이 필요합니다.**
 
 ## 목차
 - [설치방법](#설치방법)
@@ -14,11 +13,11 @@ Twitch Emoji Downloader는 트위치 스트리머의 이모티콘을 다운로�
 **releases** <code>https://github.com/Kwabang/TwitchEmojiDownloader/releases</code>
 
 ### 사용방법
-1. 모듈설치 <code>pip3 install -r requirements.txt</code>
-2. exmaple_config.json을 config.json으로 변경
-3. 트위치 개발자 콘솔에서 API Client_ID 발급후 config.json에 입력<br />
+1. 모듈설치 <code>npm install</code>
+2. config폴더에 exmaple_config.json을 config.json으로 변경
+3. 트위치 개발자 콘솔에서 클라이언트 ID와 클라이언트 시크릿을 발급후 config.json에 입력<br />
   -참고자료 : https://docs.aws.amazon.com/ko_kr/lumberyard/latest/userguide/chatplay-generate-twitch-client-id.html
-4. app.py 실행 <code>python3 app.py</code>
+4. 실행 <code>node index.js</code>
 5. 다운로드할 스트리머의 ID입력 ex) <code>다운로드를 원하는 스트리머의 ID를 입력해주세요. : **twitchkr**</code>
 
 ### 문의
