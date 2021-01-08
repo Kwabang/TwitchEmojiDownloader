@@ -63,7 +63,7 @@ const download = async (streamer) => {
 				res.body.on("error", reject)
 				fileStream.on("finish", resolve)
 			}).catch((error) => {
-				console.log(`이모티콘 다운로드에 실패하였습니다.\n${error}`)
+				console.log(`${emote_list[n].text} 이모티콘 다운로드에 실패하였습니다.\n${error}`)
 			})
 		}
 	}
