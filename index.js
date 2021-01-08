@@ -68,7 +68,11 @@ const download = async (streamer) => {
 	for (let i = 0; i <= emote_list.length; i++) {
 		if (i == emote_list.length) {
 			console.log(`이모티콘 다운로드가 완료되었습니다.`)
+			await new Promise(resolve => {
+				setTimeout(resolve, 1000)
+			})
 		} else {
+			console.log(`Downloading ${emote_list[i].code}`)
 			res = await fetch(`https://static-cdn.jtvnw.net/emoticons/v1/${emote_list[i].id}/3.0`, {
 				method: "GET"
 			})
