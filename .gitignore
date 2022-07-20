@@ -90,4 +90,8 @@ typings/
 # Maxmind Database
 database/
 
-config.json
+# confile directory 
+config/
+
+# output directory
+img/
