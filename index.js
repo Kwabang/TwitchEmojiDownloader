@@ -13,11 +13,11 @@ const init = () => {
   rl.question("Enter the streamer's ID you want to download. : ", async (streamerID) => {
     try {
       const emotes = await query.userSubscriptionProducts(streamerID)
-      check.directory(config,streamerID)
+      check.directory(config, streamerID)
       for (emoteElement of emotes) {
         console.log(`Downloading ${emoteElement.text}`)
         const res = await get.emote(emoteElement.id)
-        await write.emote(config, streamerID, res, emoteElement.id,emoteElement.text)
+        await write.emote(config, streamerID, res[0], emoteElement.id, emoteElement.text, res[1])
       }
     } catch (error) {
       console.log(error)
