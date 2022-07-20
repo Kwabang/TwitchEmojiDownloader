@@ -17,7 +17,7 @@ const init = () => {
       for (emoteElement of emotes) {
         console.log(`Downloading ${emoteElement.text}`)
         const res = await get.emote(emoteElement.id)
-        await write.emote(config, streamerID, res, emoteElement.text)
+        await write.emote(config, streamerID, res, emoteElement.id,emoteElement.text)
       }
     } catch (error) {
       console.log(error)

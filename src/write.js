@@ -1,8 +1,13 @@
 const fs = require('fs')
 
-const emote = (config, streamerID, res, emoteText) => {
+const emote = (config, streamerID, res, emoteID, emoteText) => {
   return new Promise(async (resolve, reject) => {
-    const fileStream = fs.createWriteStream(config.path + streamerID + '/' + emoteText + '.png')
+    let fileStream
+    if (emoteID.includes('emotesv2')) {
+      fileStream = fs.createWriteStream(config.path + streamerID + '/' + emoteText + '.gif')
+    } else {
+      fileStream = fs.createWriteStream(config.path + streamerID + '/' + emoteText + '.png')
+    }
     try {
       await new Promise((resolve, reject) => {
         res.body.pipe(fileStream)
