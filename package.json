@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Kwabang/TwitchEmojiDownloader#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   }
 }
