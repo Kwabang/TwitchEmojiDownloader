@@ -1,4 +1,9 @@
 const fetch = require('node-fetch')
+const readline = require('readline')
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
 
 const emote = (emoteID) => {
   return new Promise(async (resolve, reject) => {
@@ -29,4 +34,14 @@ const emote = (emoteID) => {
   })
 }
 
+const answer = (question) => {
+  return new Promise((resolve,reject) => {
+    rl.question(question, async (result) => {
+      rl.close()
+      resolve(result)
+    })
+  })
+}
+
 exports.emote = emote
+exports.answer = answer
